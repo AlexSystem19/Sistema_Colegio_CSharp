@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Platform_School_A6
 {
     public partial class Form1 : Form
     {
+        private Estudiantes estudiante = new Estudiantes();
         public Form1()
         {
             InitializeComponent();
