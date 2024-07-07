@@ -35,12 +35,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textboxEmail = new System.Windows.Forms.TextBox();
             this.lbl_Mail = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textboxApellido = new System.Windows.Forms.TextBox();
             this.lbl_Apellido = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textboxNombre = new System.Windows.Forms.TextBox();
+            this.textboxDNI = new System.Windows.Forms.TextBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.lbl_Dni = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -104,12 +104,12 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.textboxEmail);
             this.groupBox2.Controls.Add(this.lbl_Mail);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.textboxApellido);
             this.groupBox2.Controls.Add(this.lbl_Apellido);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textboxNombre);
+            this.groupBox2.Controls.Add(this.textboxDNI);
             this.groupBox2.Controls.Add(this.lbl_Nombre);
             this.groupBox2.Controls.Add(this.lbl_Dni);
             this.groupBox2.Controls.Add(this.groupBox5);
@@ -149,6 +149,7 @@
             this.button2.Size = new System.Drawing.Size(70, 70);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -164,17 +165,17 @@
             this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox5
+            // textboxEmail
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textboxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(186, 327);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 29);
-            this.textBox5.TabIndex = 4;
+            this.textboxEmail.Location = new System.Drawing.Point(186, 327);
+            this.textboxEmail.Multiline = true;
+            this.textboxEmail.Name = "textboxEmail";
+            this.textboxEmail.Size = new System.Drawing.Size(149, 29);
+            this.textboxEmail.TabIndex = 4;
+            this.textboxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxEmail_KeyPress);
             // 
             // lbl_Mail
             // 
@@ -185,13 +186,14 @@
             this.lbl_Mail.TabIndex = 8;
             this.lbl_Mail.Text = "Email";
             // 
-            // textBox4
+            // textboxApellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 328);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(152, 29);
-            this.textBox4.TabIndex = 3;
+            this.textboxApellido.Location = new System.Drawing.Point(15, 328);
+            this.textboxApellido.Multiline = true;
+            this.textboxApellido.Name = "textboxApellido";
+            this.textboxApellido.Size = new System.Drawing.Size(152, 29);
+            this.textboxApellido.TabIndex = 3;
+            this.textboxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxApellido_KeyPress);
             // 
             // lbl_Apellido
             // 
@@ -202,23 +204,26 @@
             this.lbl_Apellido.TabIndex = 6;
             this.lbl_Apellido.Text = "Apellido";
             // 
-            // textBox3
+            // textboxNombre
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textboxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(186, 260);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 29);
-            this.textBox3.TabIndex = 2;
+            this.textboxNombre.Location = new System.Drawing.Point(186, 260);
+            this.textboxNombre.Multiline = true;
+            this.textboxNombre.Name = "textboxNombre";
+            this.textboxNombre.Size = new System.Drawing.Size(149, 29);
+            this.textboxNombre.TabIndex = 2;
+            this.textboxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxNombre_KeyPress);
             // 
-            // textBox2
+            // textboxDNI
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 260);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 29);
-            this.textBox2.TabIndex = 1;
+            this.textboxDNI.Location = new System.Drawing.Point(15, 260);
+            this.textboxDNI.Multiline = true;
+            this.textboxDNI.Name = "textboxDNI";
+            this.textboxDNI.Size = new System.Drawing.Size(152, 29);
+            this.textboxDNI.TabIndex = 1;
+            this.textboxDNI.TextChanged += new System.EventHandler(this.textboxDNI_TextChanged);
+            this.textboxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxDNI_KeyPress);
             // 
             // lbl_Nombre
             // 
@@ -310,7 +315,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 19);
+            this.textBox1.Location = new System.Drawing.Point(489, 19);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(233, 33);
@@ -321,7 +326,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(11, 25);
+            this.label2.Location = new System.Drawing.Point(389, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 0;
@@ -368,13 +373,13 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textboxNombre;
+        private System.Windows.Forms.TextBox textboxDNI;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Label lbl_Dni;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textboxEmail;
         private System.Windows.Forms.Label lbl_Mail;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textboxApellido;
         private System.Windows.Forms.Label lbl_Apellido;
         private System.Windows.Forms.PictureBox pictureBoxImagen;
         private System.Windows.Forms.Button button1;

@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LEstudiantes.cs" />
+    <Compile Include="Library\Librarys.cs" />
     <Compile Include="Library\LUploadImage.cs" />
+    <Compile Include="Library\TextBoxEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
