@@ -116,7 +116,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(1, 171);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(344, 458);
+            this.groupBox2.Size = new System.Drawing.Size(352, 481);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -168,16 +168,18 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(191, 328);
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.Location = new System.Drawing.Point(186, 327);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(128, 29);
+            this.textBox5.Size = new System.Drawing.Size(149, 29);
             this.textBox5.TabIndex = 4;
             // 
             // lbl_Mail
             // 
             this.lbl_Mail.AutoSize = true;
-            this.lbl_Mail.Location = new System.Drawing.Point(191, 311);
+            this.lbl_Mail.Location = new System.Drawing.Point(183, 311);
             this.lbl_Mail.Name = "lbl_Mail";
             this.lbl_Mail.Size = new System.Drawing.Size(32, 13);
             this.lbl_Mail.TabIndex = 8;
@@ -202,10 +204,12 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(192, 260);
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Location = new System.Drawing.Point(186, 260);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 29);
+            this.textBox3.Size = new System.Drawing.Size(149, 29);
             this.textBox3.TabIndex = 2;
             // 
             // textBox2
@@ -213,13 +217,13 @@
             this.textBox2.Location = new System.Drawing.Point(15, 260);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 29);
+            this.textBox2.Size = new System.Drawing.Size(152, 29);
             this.textBox2.TabIndex = 1;
             // 
             // lbl_Nombre
             // 
             this.lbl_Nombre.AutoSize = true;
-            this.lbl_Nombre.Location = new System.Drawing.Point(189, 243);
+            this.lbl_Nombre.Location = new System.Drawing.Point(183, 243);
             this.lbl_Nombre.Name = "lbl_Nombre";
             this.lbl_Nombre.Size = new System.Drawing.Size(44, 13);
             this.lbl_Nombre.TabIndex = 3;
@@ -239,7 +243,7 @@
             this.groupBox5.Controls.Add(this.pictureBoxImagen);
             this.groupBox5.Location = new System.Drawing.Point(57, 44);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(234, 174);
+            this.groupBox5.Size = new System.Drawing.Size(234, 149);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
@@ -249,9 +253,9 @@
             this.pictureBoxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxImagen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxImagen.Image = global::Platform_School_A6.Properties.Resources.asistencia_social;
-            this.pictureBoxImagen.Location = new System.Drawing.Point(21, 19);
+            this.pictureBoxImagen.Location = new System.Drawing.Point(6, 0);
             this.pictureBoxImagen.Name = "pictureBoxImagen";
-            this.pictureBoxImagen.Size = new System.Drawing.Size(188, 149);
+            this.pictureBoxImagen.Size = new System.Drawing.Size(222, 149);
             this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImagen.TabIndex = 0;
             this.pictureBoxImagen.TabStop = false;
@@ -274,9 +278,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(351, 171);
+            this.groupBox3.Location = new System.Drawing.Point(359, 171);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(831, 458);
+            this.groupBox3.Size = new System.Drawing.Size(823, 481);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -285,7 +289,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(312, 16);
+            this.label4.Location = new System.Drawing.Point(308, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(207, 25);
             this.label4.TabIndex = 0;
@@ -327,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 641);
+            this.ClientSize = new System.Drawing.Size(1181, 664);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

@@ -13,7 +13,7 @@ namespace Platform_School_A6
 {
     public partial class Form1 : Form
     {
-        private Estudiantes estudiante = new Estudiantes();
+        private LEstudiantes estudiante = new LEstudiantes();
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Platform_School_A6
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            estudiante.CargarImagen(pictureBoxImagen);
         }
     }
 }

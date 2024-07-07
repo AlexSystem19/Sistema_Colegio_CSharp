@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Estudiantes.cs" />
+    <Compile Include="LEstudiantes.cs" />
     <Compile Include="Library\LUploadImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
