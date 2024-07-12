@@ -165,6 +165,7 @@
             this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textboxEmail
             // 
@@ -175,6 +176,7 @@
             this.textboxEmail.Name = "textboxEmail";
             this.textboxEmail.Size = new System.Drawing.Size(149, 29);
             this.textboxEmail.TabIndex = 4;
+            this.textboxEmail.TextChanged += new System.EventHandler(this.textboxEmail_TextChanged);
             this.textboxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxEmail_KeyPress);
             // 
             // lbl_Mail
@@ -193,6 +195,7 @@
             this.textboxApellido.Name = "textboxApellido";
             this.textboxApellido.Size = new System.Drawing.Size(152, 29);
             this.textboxApellido.TabIndex = 3;
+            this.textboxApellido.TextChanged += new System.EventHandler(this.textboxApellido_TextChanged);
             this.textboxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxApellido_KeyPress);
             // 
             // lbl_Apellido
@@ -213,6 +216,7 @@
             this.textboxNombre.Name = "textboxNombre";
             this.textboxNombre.Size = new System.Drawing.Size(149, 29);
             this.textboxNombre.TabIndex = 2;
+            this.textboxNombre.TextChanged += new System.EventHandler(this.textboxNombre_TextChanged);
             this.textboxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxNombre_KeyPress);
             // 
             // textboxDNI
@@ -258,9 +262,9 @@
             this.pictureBoxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxImagen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxImagen.Image = global::Platform_School_A6.Properties.Resources.asistencia_social;
-            this.pictureBoxImagen.Location = new System.Drawing.Point(6, 0);
+            this.pictureBoxImagen.Location = new System.Drawing.Point(34, 6);
             this.pictureBoxImagen.Name = "pictureBoxImagen";
-            this.pictureBoxImagen.Size = new System.Drawing.Size(222, 149);
+            this.pictureBoxImagen.Size = new System.Drawing.Size(164, 143);
             this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImagen.TabIndex = 0;
             this.pictureBoxImagen.TabStop = false;
