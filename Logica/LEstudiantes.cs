@@ -61,7 +61,8 @@ namespace Logica
                             {
                                 listtextlabel[3].Text = "mail valido";
                                 listtextlabel[3].ForeColor = Color.Black;
-                                var imagenarray = uploadImage.ImageToByte(image.Image);//Image con I en mayusc es una clase de sistema para decirle que es un valor te tipo IMAGEN como tal,
+
+                                var imagenarray = uploadImage.ImageToByte(image.Image);//Image con I en mayusc es una clase de sistema para decirle que es un valor te tipo IMAGEN como tal osea que lo TRANSFORME EN UNA IMAGEN COMO ES NO EN BINARIO NO EN EXA SI NO EN IMAGEN IMAGEN QUE LA TRATE COMO TAL entonces  se e pone .IMAGE asi como .TEXT o .true OSEA ES UNA EXTENSION DE image,
                                                                                        //a la image que es la local y toma esa propiedad entonces la pasamos a
                                                                                        //un imagetobyte el proceso requiere de una imagen para que sea pasado a un array que previamente pedia un metodo
                                                                                        //en esta caso la clase se crea con un byte y con un [] que rerpresenta el array
