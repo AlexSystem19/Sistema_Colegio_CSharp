@@ -75,7 +75,7 @@ namespace Logica
                                                                     .Value(e => e.nombre, listtextbox[1].Text)
                                                                     .Value(e => e.apellido, listtextbox[2].Text)
                                                                     .Value(e => e.email, listtextbox[3].Text)
-                                                                    //.Value(e => e.image, imagenarray)
+                                                                    .Value(e => e.image, imagenarray)
                                                                     .Insert();
                             }
                             else
