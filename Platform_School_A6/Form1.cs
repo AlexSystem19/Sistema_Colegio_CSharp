@@ -1,4 +1,5 @@
 ﻿using Logica;
+using Logica.Library;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,11 @@ namespace Platform_School_A6
     public partial class Form1 : Form
     {
         private LEstudiantes estudiante;//cremaos un objeto privado con las metodos y procedimientos de las otras clases que estan en una lista.
+        //private Librarys librarys;
         public Form1()
         {
             InitializeComponent();
-
+            //librarys = new Librarys();
             //creamos una lista y añadimos columnas en base a objetos.
             var listtextbox = new List<TextBox>();
             listtextbox.Add(textboxDNI);

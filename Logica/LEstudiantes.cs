@@ -1,4 +1,6 @@
-﻿using Logica.Library;
+﻿using Data;
+using LinqToDB;
+using Logica.Library;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,12 +16,14 @@ namespace Logica
         private List<TextBox> listtextbox;
         private List<Label> listtextlabel;
         private PictureBox image;
+        //private Librarys librarys;
 
         //metodo CONSTRUCTOR que recibe un paramaetro un objeto de tipo textbos de tipo lista de tipo estudiante
         public LEstudiantes(List<TextBox> listtextbox, List<Label> listtextlabel, object[] objetos)
         {
             this.listtextbox = listtextbox;
             this.listtextlabel = listtextlabel;
+            //librarys = new Librarys();
             image = (PictureBox)objetos[0];
         }
 
@@ -63,10 +67,16 @@ namespace Logica
                                 listtextlabel[3].ForeColor = Color.Black;
 
                                 var imagenarray = uploadImage.ImageToByte(image.Image);//Image con I en mayusc es una clase de sistema para decirle que es un valor te tipo IMAGEN como tal osea que lo TRANSFORME EN UNA IMAGEN COMO ES NO EN BINARIO NO EN EXA SI NO EN IMAGEN IMAGEN QUE LA TRATE COMO TAL entonces  se e pone .IMAGE asi como .TEXT o .true OSEA ES UNA EXTENSION DE image,
-                                                                                       //a la image que es la local y toma esa propiedad entonces la pasamos a
-                                                                                       //un imagetobyte el proceso requiere de una imagen para que sea pasado a un array que previamente pedia un metodo
-                                                                                       //en esta caso la clase se crea con un byte y con un [] que rerpresenta el array
-                                                                                       //entonces se le pasa un formato Imagetobyte de tipo IMAGEN = Image cual recibe el objeto del mismo nombre y se le asigna el formato byte en array
+                                                                                                //a la image que es la local y toma esa propiedad entonces la pasamos a
+                                                                                                //un imagetobyte el proceso requiere de una imagen para que sea pasado a un array que previamente pedia un metodo
+                                                                                                //en esta caso la clase se crea con un byte y con un [] que rerpresenta el array
+                                                                                                //entonces se le pasa un formato Imagetobyte de tipo IMAGEN = Image cual recibe el objeto del mismo nombre y se le asigna el formato byte en array
+                                _Estudiante.Value(e => e.dni, listtextbox[0].Text)
+                                                                    .Value(e => e.nombre, listtextbox[1].Text)
+                                                                    .Value(e => e.apellido, listtextbox[2].Text)
+                                                                    .Value(e => e.email, listtextbox[3].Text)
+                                                                    //.Value(e => e.image, imagenarray)
+                                                                    .Insert();
                             }
                             else
                             {
