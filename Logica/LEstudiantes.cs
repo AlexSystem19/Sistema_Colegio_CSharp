@@ -61,11 +61,20 @@ namespace Logica
                             listtextbox[3].Focus();
                         }
                         else
-                        {//validar formato de correo enviando un objeto al metodo que se esta usando
-                            if(textboxevent.validarFormatoEmail(listtextbox[3].Text))
+                        {
+                            if(textboxevent.validarFormatoEmail(listtextbox[3].Text))//validar formato de correo enviando un objeto al metodo que se esta usando
                             {
-                                listtextlabel[3].Text = "mail valido";
-                                listtextlabel[3].ForeColor = Color.Black;
+                                var user = _Estudiante.Where(u=> u.Equals(listtextbox[3].Text)).ToList();
+                                if (user.Count.Equals(0))
+                                {
+                                    Save();
+                                }
+                                else
+                                {
+                                    listtextlabel[3].Text = "Email ya registrado";
+                                    listtextlabel[3].ForeColor= Color.Red;
+                                    listtextlabel[3].Focus();
+                                }
 
 
                             }
@@ -83,7 +92,7 @@ namespace Logica
 
         }
 
-        private void save()
+        private void Save()
         {
             BeginTransactionAsync();
             try
