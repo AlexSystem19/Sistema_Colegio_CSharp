@@ -18,6 +18,10 @@ namespace Logica
         private PictureBox image;
         private string _accion = "insert";
         private DataGridView _dataGridView;
+
+        private int _reg_por_pagina = 2;
+        private int _num_por_pagina = 1;
+
         //private Librarys librarys;
 
         //metodo CONSTRUCTOR que recibe un paramaetro un objeto de tipo textbos de tipo lista de tipo estudiante
@@ -27,6 +31,7 @@ namespace Logica
             this.listtextlabel = listtextlabel;
             //librarys = new Librarys();
             image = (PictureBox)objetos[0];
+            _dataGridView = (DataGridView)objetos[2];
             //cargardatos();
         }
 
@@ -122,6 +127,26 @@ namespace Logica
             catch (Exception)
             {
                 RollbackTransaction();
+            }
+        }
+
+        public void searchEstudiante(string campo)
+        {
+            List <Estudiante> query = new List<Estudiante> ();
+            int inicio = (_num_por_pagina - 1) * _reg_por_pagina;
+            if (campo.Equals(""))
+            {
+                query = _Estudiante.ToList ();
+            }
+            else
+            {
+                query = _Estudiante.Where(c=> c.dni.StartsWith(campo) ||
+                c.nombre.StartsWith(campo)).ToList ();
+            }
+
+            if (query.Count > 0) 
+            {
+                _dataGridView.DataSource = query;
             }
         }
 
