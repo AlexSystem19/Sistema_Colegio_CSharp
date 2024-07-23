@@ -32,10 +32,13 @@ namespace Platform_School_A6
             listtextlabel.Add(lbl_Apellido);
             listtextlabel.Add(lbl_Mail);
 
-            Object[] objetos = {pictureBoxImagen};
+            Object[] objetos = {
+                pictureBoxImagen,
+            Properties.Resources.asistencia_social,
+            dataGridView1};
 
             estudiante = new LEstudiantes(listtextbox,listtextlabel, objetos);//la clase estudiante tiene un constructor que recibe 2 parametro con ese mismo nombre como tal e realaciona en un objeto "estudiante"
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

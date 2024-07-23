@@ -17,6 +17,7 @@ namespace Logica
         private List<Label> listtextlabel;
         private PictureBox image;
         private string _accion = "insert";
+        private DataGridView _dataGridView;
         //private Librarys librarys;
 
         //metodo CONSTRUCTOR que recibe un paramaetro un objeto de tipo textbos de tipo lista de tipo estudiante
@@ -26,6 +27,7 @@ namespace Logica
             this.listtextlabel = listtextlabel;
             //librarys = new Librarys();
             image = (PictureBox)objetos[0];
+            //cargardatos();
         }
 
         public void Registrar()
@@ -64,19 +66,17 @@ namespace Logica
                         {
                             if(textboxevent.validarFormatoEmail(listtextbox[3].Text))//validar formato de correo enviando un objeto al metodo que se esta usando
                             {
-                                Save();
-
-                                //var user = _Estudiante.Where(u=> u.Equals(listtextbox[3].Text)).ToList();
-                                //if (user.Count.Equals(0))
-                                //{
-                                //    Save();
-                                //}
-                                //else
-                                //{
-                                //    listtextlabel[3].Text = "Email ya registrado";
-                                //    listtextlabel[3].ForeColor= Color.Red;
-                                //    listtextlabel[3].Focus();
-                                //}
+                                var user = _Estudiante.Where(u => u.email.Equals(listtextbox[3].Text)).ToList();
+                                if (user.Count.Equals(0))
+                                {
+                                    Save();
+                                }
+                                else
+                                {
+                                    listtextlabel[3].Text = "Email ya registrado";
+                                    listtextlabel[3].ForeColor = Color.Red;
+                                    listtextlabel[3].Focus();
+                                }
 
 
                             }
@@ -117,12 +117,28 @@ namespace Logica
 
                 }
                 CommitTransaction();
-                //Restablecer();
+                Restablecer();
             }
             catch (Exception)
             {
                 RollbackTransaction();
             }
+        }
+
+        private void Restablecer()
+        {
+            listtextlabel[0].Text = "DNI";
+            listtextlabel[1].Text = "Nombre";
+            listtextlabel[2].Text = "Apellido";
+            listtextlabel[3].Text = "Email";
+            listtextlabel[0].ForeColor = Color.Gray;
+            listtextlabel[1].ForeColor = Color.Gray;
+            listtextlabel[2].ForeColor = Color.Gray;
+            listtextlabel[3].ForeColor = Color.Gray;
+            listtextbox[0].Text = "";
+            listtextbox[1].Text = "";
+            listtextbox[2].Text = "";
+            listtextbox[3].Text = "";
         }
     }
 }
