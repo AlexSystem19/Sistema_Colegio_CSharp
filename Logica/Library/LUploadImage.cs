@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,11 @@ namespace Logica.Library
         {
             var converter = new ImageConverter(); //creamos una variable de un tipo especifico para convertir una imagen
             return (byte[])converter.ConvertTo(pictureBox1, typeof(byte[])); // retorna el valor declaro array aplicando la variable convirtiendola el cual recibe el argumento que se transforma en un formato de imagen de tipo array
+        }
+
+        public Image byteArrayToImage(byte[] byteArray)
+        {
+            return Image.FromStream(new MemoryStream(byteArray));
         }
     }
 }

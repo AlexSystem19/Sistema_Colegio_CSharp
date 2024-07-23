@@ -18,6 +18,7 @@ namespace Logica
         private PictureBox image;
         private string _accion = "insert";
         private DataGridView _dataGridView;
+        private Bitmap _imagBitmap;
 
         private int _reg_por_pagina = 2;
         private int _num_por_pagina = 1;
@@ -171,6 +172,27 @@ namespace Logica
             listtextbox[1].Text = "";
             listtextbox[2].Text = "";
             listtextbox[3].Text = "";
+        }
+
+        private int _idEstudiante = 0;
+        public void GetEstudiante()
+        {
+            _accion = "Actualizado";
+            _idEstudiante = Convert.ToInt16(_dataGridView.CurrentRow.Cells[0].Value);
+            listtextbox[0].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[1].Value);
+            listtextbox[1].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[2].Value);
+            listtextbox[2].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[3].Value);
+            listtextbox[3].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[4].Value);
+            try
+            {
+                byte[] arrayImage = (byte[])_dataGridView.CurrentRow.Cells[5].Value;
+                image.Image = uploadImage.byteArrayToImage(arrayImage);
+            }
+             catch(Exception)
+            {
+                image.Image = _imagBitmap;
+            }
+
         }
     }
 }

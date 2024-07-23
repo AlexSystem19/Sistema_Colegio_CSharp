@@ -138,5 +138,17 @@ namespace Platform_School_A6
         {
             estudiante.searchEstudiante(textBox1.Text);
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count != 0)
+                estudiante.GetEstudiante();
+        }
+
+        private void dataGridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (dataGridView1.Rows.Count != 0)
+                estudiante.GetEstudiante();
+        }
     }
 }
