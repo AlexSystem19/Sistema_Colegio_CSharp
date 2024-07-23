@@ -150,6 +150,13 @@ namespace Logica
             }
         }
 
+        public void basicview()
+        {
+            List<Estudiante> query = new List<Estudiante> ();
+            query = _Estudiante.ToList();
+            _dataGridView.DataSource= query;
+        }
+
         private void Restablecer()
         {
             listtextlabel[0].Text = "DNI";

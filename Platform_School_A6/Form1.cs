@@ -43,7 +43,7 @@ namespace Platform_School_A6
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            estudiante.basicview();
         }
 
         private void groupBox5_Enter(object sender, EventArgs e)
