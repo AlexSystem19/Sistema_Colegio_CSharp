@@ -120,6 +120,15 @@ namespace Logica
                                     .Value(e => e.image, imagenarray)
                                     .Insert();
                         break;
+                    case "Actualizado":
+                        _Estudiante.Where(u => u.id.Equals(_idEstudiante))
+                            .Set(e => e.dni, listtextbox[0].Text)
+                            .Set(e => e.nombre, listtextbox[1].Text)
+                            .Set(e => e.apellido, listtextbox[2].Text)
+                            .Set(e => e.email, listtextbox[3].Text)
+                            .Set(e => e.image, imagenarray)
+                            .Update();
+                        break;
 
                 }
                 CommitTransaction();
@@ -147,7 +156,24 @@ namespace Logica
 
             if (query.Count > 0) 
             {
-                _dataGridView.DataSource = query;
+                _dataGridView.DataSource = query.Select(c => new
+                {
+                    c.id,
+                    c.nombre,
+                    c.apellido,
+                    c.email,
+                    c.image,
+                }).ToList();
+            }
+            else
+            {
+                _dataGridView.DataSource = query.Select(c => new
+                {
+                    c.id,
+                    c.nombre,
+                    c.apellido,
+                    c.email, c.image,
+                }).ToList();
             }
         }
 
@@ -156,6 +182,24 @@ namespace Logica
             List<Estudiante> query = new List<Estudiante> ();
             query = _Estudiante.ToList();
             _dataGridView.DataSource= query;
+        }
+        private int _idEstudiante = 0;
+        public void Eliminar()
+        {
+            if (_idEstudiante.Equals(0))
+            {
+                MessageBox.Show("Seleccionar estudiante");
+            }
+            else
+            {
+                if(MessageBox.Show("estas seguro de eliminar estudiante?","Eliminar estudiante",
+                    MessageBoxButtons.YesNo)==DialogResult.Yes)
+                {
+                    _Estudiante.Where(c => c.id.Equals(_idEstudiante)).Delete();
+                    Restablecer();
+                    basicview();
+                }
+            }
         }
 
         private void Restablecer()
@@ -174,7 +218,7 @@ namespace Logica
             listtextbox[3].Text = "";
         }
 
-        private int _idEstudiante = 0;
+        
         public void GetEstudiante()
         {
             _accion = "Actualizado";

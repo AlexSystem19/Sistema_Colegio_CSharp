@@ -150,5 +150,10 @@ namespace Platform_School_A6
             if (dataGridView1.Rows.Count != 0)
                 estudiante.GetEstudiante();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            estudiante.Eliminar();
+        }
     }
 }
