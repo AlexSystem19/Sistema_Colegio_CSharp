@@ -177,6 +177,7 @@ namespace Logica
             }
         }
 
+
         public void basicview()
         {
             List<Estudiante> query = new List<Estudiante> ();
