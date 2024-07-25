@@ -134,10 +134,12 @@ namespace Platform_School_A6
             }
         }
 
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             estudiante.searchEstudiante(textBox1.Text);
         }
+
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -145,11 +147,13 @@ namespace Platform_School_A6
                 estudiante.GetEstudiante();
         }
 
+
         private void dataGridView1_KeyUp(object sender, KeyEventArgs e)
         {
             if (dataGridView1.Rows.Count != 0)
                 estudiante.GetEstudiante();
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
