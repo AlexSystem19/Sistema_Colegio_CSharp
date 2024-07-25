@@ -207,7 +207,7 @@ namespace Logica
             }
         }
 
-        private void Restablecer()
+        public void Restablecer()
         {
             listtextlabel[0].Text = "DNI";
             listtextlabel[1].Text = "Nombre";
@@ -221,8 +221,9 @@ namespace Logica
             listtextbox[1].Text = "";
             listtextbox[2].Text = "";
             listtextbox[3].Text = "";
+            
         }
-
+                   
         
         public void GetEstudiante()
         {

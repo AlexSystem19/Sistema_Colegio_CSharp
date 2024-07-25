@@ -70,7 +70,7 @@ namespace Platform_School_A6
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            estudiante.Restablecer();
         }
 
         private void textboxDNI_KeyPress(object sender, KeyPressEventArgs e)
