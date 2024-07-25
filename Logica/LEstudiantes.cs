@@ -32,8 +32,9 @@ namespace Logica
             this.listtextlabel = listtextlabel;
             //librarys = new Librarys();
             image = (PictureBox)objetos[0];
+            _imagBitmap = (Bitmap)objetos[1];
             _dataGridView = (DataGridView)objetos[2];
-            //cargardatos();
+            Restablecer();
         }
 
         public void Registrar()
@@ -159,6 +160,7 @@ namespace Logica
                 _dataGridView.DataSource = query.Select(c => new
                 {
                     c.id,
+                    c.dni,
                     c.nombre,
                     c.apellido,
                     c.email,
@@ -170,9 +172,11 @@ namespace Logica
                 _dataGridView.DataSource = query.Select(c => new
                 {
                     c.id,
+                    c.dni,
                     c.nombre,
                     c.apellido,
-                    c.email, c.image,
+                    c.email,
+                    c.image,
                 }).ToList();
             }
         }
