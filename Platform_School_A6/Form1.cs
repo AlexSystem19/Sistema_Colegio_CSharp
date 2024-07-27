@@ -141,6 +141,7 @@ namespace Platform_School_A6
         }
 
 
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows.Count != 0)
